@@ -12,7 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by david on 31/08/16.
  */
 var core_1 = require('@angular/core');
-// Mocking data that should be retrieved from a service
+// Mocking data that should be retrieved from a data service
 var HEROES = [
     { id: 11, name: 'Mr. Nice' },
     { id: 12, name: 'Narco' },
@@ -38,6 +38,7 @@ var AppComponent = (function () {
             id: 1,
             name: 'Windstorm'
         };
+        this.heroes = HEROES;
     }
     AppComponent = __decorate([
         core_1.Component({

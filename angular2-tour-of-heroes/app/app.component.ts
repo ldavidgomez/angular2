@@ -3,7 +3,7 @@
  */
 import { Component } from '@angular/core';
 
-// Mocking data that should be retrieved from a service
+// Mocking data that should be retrieved from a data service
 const HEROES: Hero[] = [
     { id: 11, name: 'Mr. Nice' },
     { id: 12, name: 'Narco' },
@@ -42,5 +42,6 @@ export class AppComponent {
         id: 1,
         name: 'Windstorm'
     };
+    heroes = HEROES;
 }
 
