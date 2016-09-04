@@ -40,14 +40,14 @@ var HeroService = (function () {
             .catch(this.handleError);
     };
     HeroService.prototype.delete = function (id) {
-        var url = '${this.heroesUrl}/${id}';
+        var url = this.heroesUrl + "/" + id;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })
             .catch(this.handleError);
     };
     HeroService.prototype.update = function (hero) {
-        var url = '${this.heroesUrl}/${hero.id}';
+        var url = this.heroesUrl + "/" + hero.id;
         return this.http
             .put(url, JSON.stringify(hero), { headers: this.headers })
             .toPromise()
